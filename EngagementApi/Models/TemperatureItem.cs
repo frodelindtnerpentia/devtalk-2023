@@ -1,4 +1,4 @@
-namespace EngagementApi
+namespace EngagementApi.Models
 {
     public class TemperatureItem
     {

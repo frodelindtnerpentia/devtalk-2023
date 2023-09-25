@@ -1,3 +1,4 @@
+using EngagementApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EngagementApi.Controllers
