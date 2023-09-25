@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetureTemperature.Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngagementApi.Unittest", "EngagementApi.Unittest\EngagementApi.Unittest.csproj", "{BF618E73-DE07-474D-A4DA-C541092959A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FeatureTemperatureTestProjects", "FeatureTemperatureTestProjects", "{5D588013-3EE3-41D5-B718-CB37FA147767}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExternalApiFoleder", "ExternalApiFoleder", "{E20D4997-8AFB-4195-B705-3FA3F05C8637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4AEB4E4C-FE38-48FD-8DDC-81700A8B2624} = {E20D4997-8AFB-4195-B705-3FA3F05C8637}
+		{457621FF-0D9D-48B7-A66E-C4B5D928EF0D} = {5D588013-3EE3-41D5-B718-CB37FA147767}
+		{BA67B345-CCC8-4056-9477-7F526A0CB2C7} = {5D588013-3EE3-41D5-B718-CB37FA147767}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {064F7AAB-26DC-48F4-BF95-638D29F17955}
