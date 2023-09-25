@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace EngagementApi.Controllers
+namespace ExternalApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -25,7 +25,11 @@ namespace EngagementApi.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)],
+                City = "Stednavn " + index.ToString(),
+                Country = "DK",
+                AverageTemp = 7,
+                GeoLocation = 726216613.7198656
             })
             .ToArray();
         }
