@@ -15,9 +15,9 @@ namespace EngagementApi.Controllers
         }
 
         [HttpGet(Name = "GetTemperature")]
-        public TemperatureItem GetTemperaturMockup()
+        public TemperatureMockItem GetTemperaturMockup()
         {
-            return new TemperatureItem
+            return new TemperatureMockItem
             {
                 Date = DateTime.Now,
                 Place = "et sted",

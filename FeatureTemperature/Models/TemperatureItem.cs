@@ -1,6 +1,6 @@
-namespace EngagementApi.Models
+namespace FeatureTemperature.Models
 {
-    public class TemperatureMockItem
+    public class TemperatureItem
     {
         public DateTime Date { get; set; }
 
