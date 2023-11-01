@@ -14,7 +14,7 @@ namespace EngagementApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetTemperature")]
+        [HttpGet(Name = "GetTemperaturMockup")]
         public TemperatureMockItem GetTemperaturMockup()
         {
             return new TemperatureMockItem
