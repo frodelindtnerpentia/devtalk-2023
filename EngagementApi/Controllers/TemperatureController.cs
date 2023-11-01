@@ -9,10 +9,10 @@ namespace EngagementApi.Controllers
     [Route("[controller]")]
     public class TemperatureController : ControllerBase
     {
-        private readonly ILogger<TemperatureMockController> _logger;
+        private readonly ILogger<TemperatureController> _logger;
         private readonly ITempertatureService _tempertatureService;
 
-        public TemperatureController(ILogger<TemperatureMockController> logger)
+        public TemperatureController(ILogger<TemperatureController> logger)
         {
             _tempertatureService = new TemperatureService();
             _logger = logger;

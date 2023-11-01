@@ -5,10 +5,10 @@ using Moq;
 namespace EngagementApi.Unittest.Controllers
 {
     [TestClass]
-    public class TemperatureControllerTests
+    public class TemperatureMockControllerTests
     {
         [TestMethod]
-        public void TemperatureControllerTest_TemeratureNotZero()
+        public void TemperatureMockController_TemeratureNotZero()
         {
             var logger = new Mock<ILogger<TemperatureMockController>>();
             var data = new TemperatureMockController(logger.Object).GetTemperaturMockup();
