@@ -9,6 +9,6 @@ namespace FeatureTemperature
 {
     public interface IWeatherForecastProvider
     {
-        public Task<WeatherForecastList> GetWeatherForecastsAsync();
+        public Task<List<WeatherForecastItem>> GetWeatherForecastsAsync();
     }
 }

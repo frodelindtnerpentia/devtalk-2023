@@ -8,5 +8,6 @@ namespace FeatureTemperature.Services
 {
     public interface ITempertatureService
     {
+        public Models.TemperatureItem GetTemperatureByPlace(string place);
     }
 }

@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace FeatureTemperature.Models.Transport
 {
-    public class WeatherForecastList
-    {
-        public List<WeatherForecastItem> Forecasts { get; set; }
-    }
     public class WeatherForecastItem
     {
         public DateTime date { get; set; }

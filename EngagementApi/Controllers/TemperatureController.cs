@@ -1,4 +1,6 @@
 using EngagementApi.Models;
+using FeatureTemperature.Models;
+using FeatureTemperature.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EngagementApi.Controllers
@@ -7,22 +9,22 @@ namespace EngagementApi.Controllers
     [Route("[controller]")]
     public class TemperatureController : ControllerBase
     {
-        private readonly ILogger<TemperatureController> _logger;
+        private readonly ILogger<TemperatureMockController> _logger;
+        private readonly ITempertatureService _tempertatureService;
 
-        public TemperatureController(ILogger<TemperatureController> logger)
+        public TemperatureController(ILogger<TemperatureMockController> logger)
         {
+            _tempertatureService = new TemperatureService();
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetTemperaturMockup")]
-        public TemperatureMockItem GetTemperaturMockup()
+        [HttpGet(Name = "GetTemperaturByPlace")]
+        public TemperatureItem GetTemperaturByPlace(string place)
         {
-            return new TemperatureMockItem
-            {
-                Date = DateTime.Now,
-                Place = "et sted",
-                Temperature = 12
-            };
+            var result = _tempertatureService.GetTemperatureByPlace(place);
+
+            return result;
         }
+
     }
 }

@@ -18,15 +18,17 @@ namespace FeatureTemperature.Services
         public Models.TemperatureItem GetTemperatureByPlace(string place) 
         {            
             var resultFromExternal = _weatherForecastProvider.GetWeatherForecastsAsync().Result;
-            var list = resultFromExternal.Forecasts;
-            var item = list.FirstOrDefault(x => x.city == place);
+            var item = resultFromExternal.FirstOrDefault(x => x.city == place);
 
-            Models.TemperatureItem returnTemperature = new()
+            Models.TemperatureItem returnTemperature = new();
+
+            if (item != null)
             {
-                Date = item.date,
-                Place = item.city,
-                Temperature = item.temperatureC
-            };
+                returnTemperature.Date = item.date;
+                returnTemperature.Place = item.city;
+                returnTemperature.Temperature = item.temperatureC;
+            }
+
             return returnTemperature;
         }
 
